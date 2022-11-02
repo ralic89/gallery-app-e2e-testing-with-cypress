@@ -1,0 +1,9 @@
+{
+    "loginHeader" : "Please login" ,
+    "createGallery" : {
+        "title" : "FOXLIFE",
+        "description" : "vodavoda",
+            "images":["https://t4.ftcdn.net/jpg/04/18/75/51/360_F_418755149_eQGDIReqUJmSkLyg2w757t6vJ42VyabT.jpg","https://i.pinimg.com/736x/13/16/e9/1316e9e0c1ba71705d17b9163b8bba93.jpg"]
+            
+    }
+}

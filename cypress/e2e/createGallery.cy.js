@@ -27,8 +27,6 @@ beforeEach ('set token to local storage', () => {
     window.localStorage.setItem('token' , token)
 })
 
-
-
 it ('Create gallery BE' , () => {
      cy.request({ 
         method : 'POST',
@@ -41,7 +39,7 @@ it ('Create gallery BE' , () => {
         headers : {
             authorization : `Bearer ${token}`
         }
-
+        
      }).then(response => {
         // console.log(response)
         expect(response.status).to.eq(201)
@@ -51,8 +49,6 @@ it ('Create gallery BE' , () => {
      })
 } )
 
-
-
 it ('Edit gallery BE' , () => {
     cy.request ({
         method : "PUT" ,
@@ -61,7 +57,6 @@ it ('Edit gallery BE' , () => {
             "title":"FOX",
             "description":"Grad Novi Sad",
             "images":["https://i.pinimg.com/736x/13/16/e9/1316e9e0c1ba71705d17b9163b8bba93.jpg"]
-
         },
         headers : {
             authorization : `Bearer ${token}`
@@ -71,12 +66,8 @@ it ('Edit gallery BE' , () => {
         expect(response.status).to.eq(200)
         expect(response.body.title).to.eq('FOX')
         expect(response.body.description).to.eq('Grad Novi Sad')
-
     })
-
 } )
-
-
 
 it ('Delete gallery BE' , () => {
     cy.request ({
@@ -88,12 +79,6 @@ it ('Delete gallery BE' , () => {
     }).then((response) => {
         expect(response.status).to.eq(200)
     })
-
-
-
-
 } )
-
-
 
 })
